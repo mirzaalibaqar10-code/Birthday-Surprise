@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Birthday Scrapbook</title>
+  <!-- Handwritten / cursive fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap controls" style="display:flex; align-items:center; gap:12px; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <strong style="font-family:'Dancing Script',cursive; font-size:28px">Birthday Scrapbook</strong>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <label>Recipient: <input id="nameInput" type="text" placeholder="Bestie" value="Bestie" style="padding:8px 10px; border:1px solid var(--ring); border-radius:10px; background:#fff"></label>
+        <button class="btn" id="spawnBalloons">🎈 Balloons</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pages wrap" style="padding-top:12px">
+
+    <!-- PAGE 1: Cover -->
+    <section class="page grad-1">
+      <div class="tape"></div><div class="tape right"></div>
+      <div class="content">
+        <h1>Happy Birthday, <span class="nameSpan">Bestie</span>! ✨</h1>
+        <p>Flip (well, scroll) through a handful of paper‑sweet moments, doodles, and a little surprise.</p>
+        <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap">
+          <span class="chip">🎂 cake time</span>
+          <span class="chip">💌 wishes</span>
+        </div>
+        <div class="sticker" style="left:24px; top:120px">🎀</div>
+        <div class="sticker" style="right:30px; top:160px; transform:rotate(12deg)">🌟</div>
+        <div class="sticker" style="left:40%; top:70%">🧁</div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: Warm wishes -->
+    <section class="page grad-2">
+      <div class="tape"></div>
+      <div class="content">
+        <h2>Sparkly Wishes</h2>
+        <p>May your day twirl with laughter, soft surprises, and the kind of memories that stick like glitter on your favorite sweater.</p>
+        <p>Here’s to more sunshine, playlists, and adventures with <span class="nameSpan">Bestie</span> written all over them.</p>
+        <div class="sticker" style="left:18px; bottom:18px; transform:rotate(-10deg)">✨</div>
+        <div class="sticker" style="right:24px; bottom:30px">🎈</div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: Interactive gift reveal with requested dress -->
+    <section class="page grad-3">
+      <div class="tape right"></div>
+      <div class="content">
+        <h2>Tap to Reveal Your Gift 🎁</h2>
+        <p>Theres no gift tho.</p>
+        <div class="card">
+          <button class="btn" id="revealBtn">🎁 Open the surprise</button>
+          <div id="revealBox" class="reveal" aria-hidden="true">
+            <div style="display:grid; grid-template-columns:1.1fr .9fr; gap:16px; margin-top:14px">
+              <div>
+                <h3 style="margin-top:0">LOL</h3>
+                <p>I told ya theres no gift 😆(HEHE)</p>
+                <p>Actually I have no idea what to add here :> </p>
+                <p>Hope you like it anyway 😉</p>
+                </div>
+                <div style="position:absolute; left:0; right:0; bottom:6px; text-align:center; color:white; font-size:12px; opacity:.9">Black Silver Pearl Ball Gown — preview</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sticker" style="left:22px; top:12px">💎</div>
+        <div class="sticker" style="right:22px; bottom:16px">🎀</div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: Memories / note page with doodles and tape -->
+    <section class="page grad-4">
+      <div class="tape"></div><div class="tape right"></div>
+      <div class="content">
+        <h2>Little Notes</h2>
+        <p>To <span class="nameSpan">Bestie</span>: thanks for the late‑night talks, the unplanned detours, and laughing till we forget why. Your kindness uhmm I dont know about that 😐. (For today lets just say you are, maybe.)</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:10px">
+          <div class="card">
+            <h3>Happy memories</h3>
+            <p>Remember the laughs, the smiles, and the special little moments that make life beautiful.</p>
+          </div>
+          <div class="card">
+            <h3>Plans</h3>
+            <p>What are your plans today???</p>
+          </div>
+        </div>
+        <div class="sticker" style="left:100px; bottom:24px">📸</div>
+        <div class="sticker" style="right:26px; top:26px; transform:rotate(-8deg)">🧸</div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: Thank-you / outro with confetti trigger -->
+    <section class="page grad-5">
+      <div class="tape"></div>
+      <div class="content">
+        <h2>With Love</h2>
+        <p>Thank you for being you — may this year be soft at the edges and bright in the middle. Keep shining, <span class="nameSpan">Bestie</span> 💖</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px">
+          <button class="btn" id="confettiBtn">✨ Confetti</button>
+          <button class="btn" id="resetStickers">🔄 Reset stickers</button>
+        </div>
+        <div class="sticker" style="left:35px; top:160px">🌈</div>
+        <div class="sticker" style="right:30px; top:160px; transform:rotate(10deg)">🌸</div>
+        <div class="sticker" style="left:40%; top:70%">🎉</div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="scroll-tip">Scroll the pages ↓</div>
+  <script src="script.js"></script>
+</body>
+</html>
